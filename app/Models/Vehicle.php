@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Vehicle extends Model
 {
     use HasFactory;
+
+    public function owner()
+    {
+        return $this->belongsToMany('App\Models\Owner');
+    }
+
+    public function driver()
+    {
+        return $this->belongsToMany('App\Models\Driver');
+    }
 }
