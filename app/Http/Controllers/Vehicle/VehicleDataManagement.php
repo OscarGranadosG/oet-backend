@@ -31,6 +31,11 @@ class VehicleDataManagement
         return Vehicle::getAll();
     }
 
+    public function getReportByOwnerDriver()
+    {
+        return Vehicle::getReport();
+    }
+
 
     
 }

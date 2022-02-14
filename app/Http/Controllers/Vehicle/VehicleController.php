@@ -46,4 +46,19 @@ class VehicleController extends Controller
                 ->setStatusCode(JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
+
+    public function getVehicleByOwnerDriver()
+    {
+        try {
+            return response()
+                ->json(['success' => true,
+                    'data' => $this->management->getReportByOwnerDriver()])
+                ->setStatusCode(JsonResponse::HTTP_OK);
+        } catch (\Exception $e) {
+            return response()
+                ->json(['success' => false,
+                    'error' => $e->getMessage()])
+                ->setStatusCode(JsonResponse::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
 }

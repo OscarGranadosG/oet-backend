@@ -40,4 +40,22 @@ class Vehicle extends Model
     {
         return $this->belongsToMany('App\Models\Driver');
     }
+
+    public static function getReport()
+    {
+        return Vehicle::select()
+            ->select(
+                'vehicles.license_plate', 
+                'vehicles.type', 
+                'owners.first_name as ownerName',
+                'owners.last_name as ownerLastName',
+                'owners.document as ownerDocument',
+                'drivers.first_name as driverName',
+                'drivers.last_name as driverLastName',
+                'drivers.document as driverDocument'
+            )
+            ->join('owners', 'owners.id', '=', 'vehicles.owner_id' )
+            ->join('drivers', 'drivers.id', '=', 'vehicles.driver_id')
+            ->get();
+    }
 }

@@ -30,3 +30,6 @@ Route::post('owner', [OwnerController::class, 'saveOwner']);
 Route::get('vehicle/getAll', [VehicleController::class, 'getVehicle']);
 Route::post('vehicle', [VehicleController::class, 'saveVehicle']);
 
+Route::get('report', [VehicleController::class, 'getVehicleByOwnerDriver']);
+
+
