@@ -15,12 +15,12 @@ class CreateVehicleOwnerTable extends Migration
     {
         Schema::create('vehicle_owner', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('vehicle_id');
-            $table->unsignedBigInteger('owner_id');
+            $table->integer('vehicle_id');
+            $table->integer('owner_id');
 
             /**Foreign keys */
-            $table->foreign('vehicle_id')->references('id')->on('vehicles')->onDelete('cascade');
-            $table->foreign('owner_id')->references('id')->on('owners')->onDelete('cascade');
+            //$table->foreign('vehicle_id')->references('id')->on('vehicles')->onDelete('cascade');
+            //$table->foreign('owner_id')->references('id')->on('owners')->onDelete('cascade');
 
             $table->timestamps();
         });
