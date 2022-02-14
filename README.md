@@ -2,7 +2,7 @@
 
 1. En caso de no tener el gestor de dependencias composer instalar(tener previamente instalado php 7.4)
 
-2. Clonar el repositorio: Usando el comando git clone https://github.com/OscarGranadosG/gradiweb_api.git 
+2. Clonar el repositorio: Usando el comando git clone https://github.com/OscarGranadosG/oet-backend.git
 
 3. Ingresar al proyecto con el comando: cd gradiweb_api
 
