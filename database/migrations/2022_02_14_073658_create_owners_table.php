@@ -17,11 +17,11 @@ class CreateOwnersTable extends Migration
             $table->id();
             $table->string('document')->unique();
             $table->string('first_name', 45);
-            $table->string('second_name', 45);
+            $table->string('second_name', 45)->nullable();
             $table->string('last_name', 45);
-            $table->string('address', 45);
+            $table->string('address', 45)->nullable();
             $table->string('phone', 45);
-            $table->string('city', 45);
+            $table->string('city', 45)->nullable();
             $table->timestamps();
         });
     }
