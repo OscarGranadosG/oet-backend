@@ -18,8 +18,8 @@ class CreateVehiclesTable extends Migration
             $table->string('license_plate', 45)->unique();
             $table->string('color', 45)->nullable();
             $table->string('type', 45);
-            $table->string('driver_id', 45);
-            $table->string('owner_id', 45);
+            $table->number('driver_id', 45);
+            $table->number('owner_id', 45);
             $table->timestamps();
         });
     }
